@@ -3,10 +3,14 @@ const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 
 const config = merge(common.config, {
+  output: {
+    publicPath: '/scripts/',
+  },
   devtool: 'eval-source-map',
   devServer: {
     contentBase: common.paths.public,
     hot: true,
+    historyApiFallback: true,
   },
   plugins: [
     new webpack.NamedModulesPlugin(),

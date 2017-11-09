@@ -17,12 +17,12 @@ const config = {
       'redux',
       'redux-thunk',
       'babel-polyfill',
+      'prop-types',
     ],
   },
   output: {
     path: path.join(PUBLIC_PATH, 'scripts'),
     filename: '[name].js',
-    publicPath: 'scripts/',
   },
   module: {
     rules: [

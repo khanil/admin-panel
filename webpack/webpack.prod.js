@@ -7,6 +7,7 @@ const common = require('./webpack.common.js');
 const config = merge(common.config, {
   output: {
     filename: '[name].[chunkhash].js',
+    publicPath: './scripts/',
   },
   devtool: 'source-map',
   plugins: [
